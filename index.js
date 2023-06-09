@@ -2,6 +2,7 @@
 
 
 
+const inform = console.log;
 
 function run() {
     const action = process.argv[2];
