@@ -10,7 +10,7 @@ const {
 
 function create(orders, customerName) {
     const order = {
-      id: nanoid(),
+      id: nanoid(4),
       customer: customerName,
       product: getProductName(),
       description: getProductDescription(),
@@ -50,7 +50,7 @@ function create(orders, customerName) {
     const index = orders.findIndex((order) => order.id === orderId);
     if (index > -1) {
       orders[index].id = orderId;
-      orders[index].coverStory = updatedOrder;
+      orders[index].product = updatedOrder;
      console.log("Order cover successfully updated.");
       return orders;
     } else {

@@ -1,33 +1,48 @@
+const { writeJSONFile, readJSONFile } = require("./src/helpers");
+const { 
+    create, 
+    destroy, 
+    updateOrder, 
+    index, 
+    show } = require("./src/warehouse-controller")
 
 
 
+    function run() {
+        const action = process.argv[2];
+        const order = process.argv[3];
+        let orders = readJSONFile("./data", "orders.json");
 
-const inform = console.log;
+        let writeToFile = false;
+        let updatedOrders = [];
 
-function run() {
-    const action = process.argv[2];
-    const animal = process.argv[3];
-    switch (action) {
-      case "index":
-        inform(action);
-        break;
-      case "create":
-        inform(action, animal);
-        break;
-      case "show":
-        inform(action, animal);
-        break;
-      case "update":
-        inform(action, animal);
-        break;
-      case "destroy":
-        inform(action, animal);
-        break;
-      case "score":
-        inform(action);
-        break;
-      default:
-        inform("There was an error.");
-    }
-  }
-  run();
+        switch (action) {
+          case "index":
+            const ordersView = index(orders);
+            console.log(ordersView);
+            break;
+
+          case "create":
+            updatedOrders = create(orders, order);
+            writeToFile = true;
+            break;
+
+          case "show":
+            const orderView = show(orders, order);
+            console.log(orderView);
+            break;
+
+          case "destroy":
+            updatedOrders = destroy(orders, order);
+            writeToFile = true;
+          break;
+      
+          default:
+            console.log("There was an error.");
+        }
+        if (writeToFile) {
+          writeJSONFile("data", "orders.json", updatedOrders);
+        }
+      }
+      
+      run()
