@@ -1,17 +1,13 @@
 const { faker } = require('@faker-js/faker');
 
-
-const getCustomerName = () => {
-    return faker.hacker.verb() + "-" + faker.hacker.noun()
-}
 const getProductName = () => {
     return faker.commerce.productName();
 }
 const getProductDescription = () => {
-    return faker.commerce.productDescription();   
+    return faker.commerce.productAdjective();   
 }
 const getProductPrice = () => {
-    return faker.commerce.price({ min: 100, max: 200, dec: 2, symbol: '$' })
+    return faker.commerce.price({ min: 50, max: 150, dec: 2 })
 }
      
 

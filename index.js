@@ -1,4 +1,4 @@
-const { writeJSONFile, readJSONFile } = require("./src/helpers");
+const { writeJSONFile, readJSONFile } = require("./src/helpers/fs-helpers");
 const { 
     create, 
     destroy, 
