@@ -21,7 +21,7 @@ function create(orders, customerName) {
   }
   
   function index(orders) {
-    return orders.map((order) => order.id + " " + order.codeName).join("\n");
+    return orders.map((order) => order.id + " " + order.customer).join("\n");
   }
   
   function show(orders, orderId) {
