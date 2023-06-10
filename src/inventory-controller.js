@@ -1,2 +1,4 @@
 const { nanoid } = require{"nanoid"};
-const 
+const inventoryData = require("../data/inventory-data.json")
+
+function create (inventory, )
