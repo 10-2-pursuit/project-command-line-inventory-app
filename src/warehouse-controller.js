@@ -62,7 +62,7 @@ function create(orders, orderName) {
 
   function total(orders) {
     let total = orders.reduce((a,b) => (a + b.price), 0)
-    total = +total.toFixed(2)
+    total = total.toFixed(2)
 
     let count = orders.length;
 
