@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Candle",
+        "priceInCents": "2000",
+        "inStock": true,
+        "scent": "Oak"
+    },
+    {
+        "name": "Shampoo",
+        "priceInCents": "1000",
+        "inStock": false,
+        "scent": "Bourbon"
+    },
+    {
+        "name": "Deodorant",
+        "priceInCents": "600",
+        "inStock": true,
+        "scent": "Winter Fresh"
+    }
+]
