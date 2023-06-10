@@ -1,0 +1,31 @@
+{
+  "name": "project-command-line-inventory-app",
+  "version": "1.0.0",
+  "description": "Command Line Inventory Lab Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "detail": "node index.js detail",
+    "create": "node index.js create",
+    "update": "node index.js update",
+    "add": "node index.js add",
+    "remove": "node index.js remove",
+    "delete": "node index.js delete",
+    "help": "node index.js help",
+    "faker": "node index.js faker",
+    "ten": "node index.js faker 10",
+    "empty": "node index.js empty"
+  },
+  "keywords": [],
+  "author": "Sung Yi",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.3.6"
+  }
+}
