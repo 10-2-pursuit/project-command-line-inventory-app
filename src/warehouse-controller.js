@@ -74,6 +74,14 @@ function create(orders, orderName) {
         return [];
     }
   }
+
+  function filterByPrice(orders) {
+    if (process.argv[3] === ">") {
+        return ordersOver100 = orders.filter((order) => order.price >= 100)
+    } else if (process.argv[3] === "<") {
+        return ordersOver100 = orders.filter((order) => order.price < 100)
+    }
+  }
   
   module.exports = {
     create,
@@ -82,5 +90,6 @@ function create(orders, orderName) {
     destroy, 
     updateOrder,
     total,
-    emptyCart 
+    emptyCart,
+    filterByPrice 
     };

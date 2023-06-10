@@ -6,7 +6,8 @@ const {
     destroy, 
     updateOrder,
     total,
-    emptyCart 
+    emptyCart,
+    filterByPrice 
     } = require("./src/warehouse-controller")
 
 

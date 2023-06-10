@@ -1,1 +1,23 @@
-[{"id":"xTzB","customer":"maya deluca","product":"Incredible Steel Sausages","description":"Incredible","price":51.86},{"id":"MHFb","customer":"david mann","product":"Small Metal Car","description":"Tasty","price":143.65},{"id":"9120","customer":"riley han","product":"Gorgeous Wooden Chips","description":"Small","price":115.22}]
+[
+  {
+    "id": "xTzB",
+    "customer": "maya deluca",
+    "product": "Incredible Steel Sausages",
+    "description": "Incredible",
+    "price": 51.86
+  },
+  {
+    "id": "MHFb",
+    "customer": "david mann",
+    "product": "Small Metal Car",
+    "description": "Tasty",
+    "price": 143.65
+  },
+  {
+    "id": "9120",
+    "customer": "riley han",
+    "product": "Gorgeous Wooden Chips",
+    "description": "Small",
+    "price": 115.22
+  }
+]
