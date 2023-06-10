@@ -7,7 +7,7 @@ const getProductDescription = () => {
     return faker.commerce.productAdjective();   
 }
 const getProductPrice = () => {
-    return faker.commerce.price({ min: 50, max: 150, dec: 2 })
+    return faker.number.float({ min: 50, max: 150, precision: 0.01 })
 }
      
 

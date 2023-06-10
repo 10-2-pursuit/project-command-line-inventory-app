@@ -21,7 +21,7 @@ function create(orders, orderName) {
   }
   
   function index(orders) {
-    return orders.map((order) => order.id + " " + order.customer).join("\n");
+    return orders.map((order) => chalk.green.bold(order.id) + " " + chalk.blueBright(order.customer)).join("\n");
   }
   
   function show(orders, orderId) {
@@ -29,11 +29,11 @@ function create(orders, orderName) {
     const  { id, customer, product, description, price } = order;
   
     return `
-      Order ID: #${id}
-      Name: ${customer}
-      Product: ${product}
-      Description: ${description}
-      Price: ${price}
+      Order ID: ${chalk.green(id)}
+      Name: ${chalk.blue(customer)}
+      Product: ${chalk.red(product)}
+      Description: ${chalk.magenta.italic(description)}
+      Price: $${chalk.yellow(price)}
       `
   }
   function destroy(orders, orderId) {
@@ -52,13 +52,35 @@ function create(orders, orderName) {
     const index = orders.findIndex((order) => order.id === orderId);
     if (index > -1) {
       orders[index].id = orderId;
-      orders[index].product = updatedOrder;
-     console.log("Order cover successfully updated.");
+      orders[index].customer = updatedOrder;
+     console.log("Successfully updated customer name on order.");
       return orders;
     } else {
      console.log("Order not found. No action taken.");
-      return orders;
+    }
+  }
+
+  function total(orders) {
+    const total = orders.reduce((a,b) => (a + +b.price), 0)
+
+    let count = orders.length;
+
+    return `The number of items in cart is ${count} and total cost of the order is $${total}`
+  }
+
+  function emptyCart(orders) {
+    if(orders) {
+        console.log("All items have been deleted from your cart.");
+        return [];
     }
   }
   
-  module.exports = { create, destroy, updateOrder, index, show };
+  module.exports = {
+    create,
+    index,
+    show, 
+    destroy, 
+    updateOrder,
+    total,
+    emptyCart 
+    };

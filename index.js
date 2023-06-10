@@ -1,10 +1,13 @@
 const { writeJSONFile, readJSONFile } = require("./src/helpers/fs-helpers");
 const { 
-    create, 
+    create,
+    index,
+    show, 
     destroy, 
-    updateOrder, 
-    index, 
-    show } = require("./src/warehouse-controller")
+    updateOrder,
+    total,
+    emptyCart 
+    } = require("./src/warehouse-controller")
 
 
 
@@ -36,7 +39,21 @@ const {
             updatedOrders = destroy(orders, order);
             writeToFile = true;
           break;
-      
+
+          case "updateOrder":
+            updatedOrders = updateOrder(orders, order, process.argv[4]);
+            writeToFile = true;
+            break;
+            
+          case "total":
+            console.log(total(orders))
+            break;
+
+          case "emptyCart":
+            updatedOrders = emptyCart(orders);
+            writeToFile = true;
+            break;
+
           default:
             console.log("There was an error.");
         }
