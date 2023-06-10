@@ -41,7 +41,7 @@ const {
             writeToFile = true;
           break;
 
-          case "updateOrder":
+          case "update":
             updatedOrders = updateOrder(orders, order, process.argv[4]);
             writeToFile = true;
             break;
@@ -50,9 +50,14 @@ const {
             console.log(total(orders))
             break;
 
-          case "emptyCart":
+          case "empty":
             updatedOrders = emptyCart(orders);
             writeToFile = true;
+            break;
+
+          case "filter":
+            const viewOrders = filterByPrice(orders);
+            console.log(viewOrders);
             break;
 
           default:
