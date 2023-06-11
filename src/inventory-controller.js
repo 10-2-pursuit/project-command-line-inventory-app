@@ -1,8 +1,8 @@
-//const { nanoid } = require("nanoid");
+const { nanoid } = require("nanoid");
 const inventoryData = require("../data/inventory-data.json");
 const { readJSONFile, writeJSONFile } = require("./helpers");
 
-//so we don't have to keep on calling readJSONFile
+//so we we don't have to keep on calling on the readJSONFile
 function getProducts() {
   const products = readJSONFile("./data", "inventory-data.json");
   return products;
@@ -12,7 +12,7 @@ function create(name, price, stock) {
   const products = getProducts();
   const newProduct = {
     name: name,
-    id: 6883,
+    id: nanoid(4),
     priceInCents: price,
     inStock: stock,
   };
@@ -43,9 +43,12 @@ function destroy(productName) {
   return updatedProducts;
 }
 
+//think about errors - more important than JEST.
 function update(productName, productPrice, productInStock) {
   const products = getProducts();
   let productToUpdate = products.find((prod) => prod.name == productName);
+  //doing this backwards - read other lab for reference
+  //Try catch - if none then no-id-found
   const updatedProducts = products.filter((prod) => prod.name != productName);
 
   productToUpdate = {
@@ -54,6 +57,7 @@ function update(productName, productPrice, productInStock) {
     priceInCents: productPrice,
     inStock: productInStock,
   };
+
   updatedProducts.push(productToUpdate);
   writeJSONFile("./data", "inventory-data.json", updatedProducts);
   return productToUpdate;

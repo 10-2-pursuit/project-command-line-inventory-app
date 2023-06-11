@@ -4,6 +4,8 @@ const { writeJSONFile, readJSONFile } = require("./src/helpers.js");
 
 
 const run = () => {
+    //Tim/Gigi: Is this allowed? Will this create problems having hard coded arguments
+    //Add error handles
     const action = process.argv[2];
     const productName = process.argv[3];
     const productPrice = process.argv[4];
@@ -42,6 +44,8 @@ const run = () => {
             const emptyShoppingCart = emptyCart()
             console.log(emptyShoppingCart);
             break;
+        default:
+            console.log("There was an unexpected error.");
     }
 }
 

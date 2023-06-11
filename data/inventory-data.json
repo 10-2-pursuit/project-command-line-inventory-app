@@ -1,4 +1,1 @@
-[
-  { "name": "Deodorant", "id": 9928, "priceInCents": "600", "inStock": true },
-  { "name": "Shampoo", "id": 5182, "priceInCents": "1500", "inStock": true }
-]
+[{"name":"Deodorant","id":9928,"priceInCents":"600","inStock":true},{"name":"Shampoo","id":5182,"priceInCents":"1500","inStock":true},{"name":"Lotion","id":6883,"priceInCents":"4300","inStock":"true"},{"name":"Bag","id":"WZ-1","priceInCents":"2000","inStock":"true"}]
