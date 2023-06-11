@@ -1,4 +1,4 @@
 [
   { "name": "Deodorant", "id": 9928, "priceInCents": "600", "inStock": true },
-  { "name": "Shampoo", "id": 5182, "priceInCents": "1500", "inStock": "true" }
+  { "name": "Shampoo", "id": 5182, "priceInCents": "1500", "inStock": true }
 ]

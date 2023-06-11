@@ -30,6 +30,18 @@ const run = () => {
             const updatedProduct = update(productName, productPrice, productInStock)
             console.log(updatedProduct)
             break;
+        case "addToCart":
+            const cartProducts = addToCart(productName, productPrice)
+            console.log(cartProducts)
+            break;
+        case "showCartDetails":
+            const showShoppingCart = showCartDetails()
+            console.log(showShoppingCart);
+            break;
+        case "emptyCart":
+            const emptyShoppingCart = emptyCart()
+            console.log(emptyShoppingCart);
+            break;
     }
 }
 

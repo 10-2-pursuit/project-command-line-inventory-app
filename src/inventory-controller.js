@@ -23,6 +23,7 @@ function create(name, price, stock) {
   return newProduct;
 }
 
+//shows single item
 function index(productName) {
   const products = getProducts();
   const product = products.filter((prod) => prod.name == productName);
