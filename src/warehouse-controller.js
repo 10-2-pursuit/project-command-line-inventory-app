@@ -61,12 +61,15 @@ function create(orders, orderName) {
   }
 
   function total(orders) {
-    let total = orders.reduce((a,b) => (a + b.price), 0)
-    total = total.toFixed(2)
-
+    let total = (orders.reduce((a,b) => (a + b.price), 0)).toFixed(2)
+    
     let count = orders.length;
 
-    return `The number of items in cart is ${count} and total cost of the order is $${total}`
+    let orderList = orders.map((order => {
+      return `${order.customer}: $${order.price}`;
+    })).join("\n")
+
+    return `${orderList} \nThe number of items in cart is ${count} and total cost of the order is $${total}`
   }
 
   function emptyCart(orders) {
