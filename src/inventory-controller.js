@@ -9,20 +9,42 @@ function getProducts () {
 }
 
 function create (name, price, stock) {
-    const product = getProducts();
+    const products = getProducts();
+    const newProduct = {
+        name: name,
+        id: 6883,
+        priceInCents: price,
+        inStock: stock,
+    }
 
+    products.push(newProduct)
+    writeJSONFile("./data", "inventory-data.json", products)
+
+    return newProduct;
 }
 
-// function index ( ) {
+function index (productName) {
+    const products = getProducts();
+    const product = products.filter((prod) => prod.name == productName)
+    return product;
+}
 
-// }
-
-function show (productId) {
+//shows all items
+function show () {
  const products = getProducts();
- const product = products.filter((prod) => prod.id == productId)
- return product;
+ return products;
+}
+
+function destroy (productName) {
+const products = getProducts();
+const updatedProducts = products.filter((prod) => prod.name != productName)
+writeJSONFile("./data", "inventory-data.json", updatedProducts)
+return updatedProducts;
 }
 
 module.exports = {
-show
+index,
+show,
+create,
+destroy
  }
