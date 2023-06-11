@@ -1,5 +1,5 @@
 /**
- * This is a warehouse app that creates list of orders from employees of a company.
+ * Creates a order.
  * @param {string} customer - The name of the customer.
  * @param {string} product - The name of the product.
  * @param {string} description - The one word adjective of the product.
