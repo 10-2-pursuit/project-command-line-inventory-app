@@ -1,20 +1,20 @@
 [
     {
         "name": "Candle",
+        "id": 4112,
         "priceInCents": "2000",
-        "inStock": true,
-        "scent": "Oak"
+        "inStock": true
     },
     {
         "name": "Shampoo",
+        "id": 5182,
         "priceInCents": "1000",
-        "inStock": false,
-        "scent": "Bourbon"
+        "inStock": false
     },
     {
         "name": "Deodorant",
+        "id": 9928,
         "priceInCents": "600",
-        "inStock": true,
-        "scent": "Winter Fresh"
+        "inStock": true
     }
 ]
