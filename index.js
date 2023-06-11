@@ -1,5 +1,7 @@
-const { show, create, destroy, index, update } = require("./src/inventory-controller")
+const { show, create, destroy, index, update } = require("./src/inventory-controller");
+const { addToCart, showCartDetails, emptyCart } = require("./src/cart-controller");
 const { writeJSONFile, readJSONFile } = require("./src/helpers.js");
+
 
 const run = () => {
     const action = process.argv[2];
