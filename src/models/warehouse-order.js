@@ -1,15 +1,14 @@
- /**
-   * Create a new order.
-   * @param {string} customer - The name of the customer.
-   * @param {string} product - The name of the product.
-   * @param {string} description - The one word adjective of the product.
-   * @param {number} price - The price of the product.
-   */
-
+/**
+ * This is a warehouse app that creates list of orders from employees of a company.
+ * @param {string} customer - The name of the customer.
+ * @param {string} product - The name of the product.
+ * @param {string} description - The one word adjective of the product.
+ * @param {number} price - The price of the product.
+ */
 
 const exampleOrder = {
-    customer: "madison lopez",
-    product: "Gum Ball Machine",
-    description: "Shiny",
-    price: 140.78
-  }
+  customer: "madison lopez",
+  product: "Gum Ball Machine",
+  description: "Shiny",
+  price: 140.78,
+};
