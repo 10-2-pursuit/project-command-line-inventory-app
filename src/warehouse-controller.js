@@ -19,12 +19,7 @@ function create(orders, orderName) {
 }
 
 function index(orders) {
-  return orders
-    .map(
-      (order) =>
-        chalk.green.bold(order.id) + " " + chalk.blueBright(order.customer)
-    )
-    .join("\n");
+  return orders.map((order) => chalk.green.bold(order.id) + " " + chalk.blueBright(order.customer)).join("\n");
 }
 
 function show(orders, orderId) {
@@ -85,8 +80,10 @@ function emptyCart(orders) {
 
 function filterByPrice(orders) {
   if (process.argv[3] === ">") {
+    console.log("All orders equal to or over $100.")
     return (ordersOver100 = orders.filter((order) => order.price >= 100));
   } else if (process.argv[3] === "<") {
+    console.log("All orders under $100.")
     return (ordersOver100 = orders.filter((order) => order.price < 100));
   }
 }
