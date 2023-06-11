@@ -1,4 +1,4 @@
-const { show, create, destroy, index } = require("./src/inventory-controller")
+const { show, create, destroy, index, update } = require("./src/inventory-controller")
 const { writeJSONFile, readJSONFile } = require("./src/helpers.js");
 
 const run = () => {
@@ -9,7 +9,7 @@ const run = () => {
     
     switch (action) {
         case "show":
-            const showProduct = show(productName)
+            const showProduct = show()
             console.log(showProduct)
             break;
         case "create":
@@ -17,8 +17,16 @@ const run = () => {
             console.log(newProduct)
             break;
         case "destroy":
-            const updatedProducts = destroy(productName)
-            console.log(updatedProducts)
+            const destroyProducts = destroy(productName)
+            console.log(destroyProducts)
+            break;
+        case "index":
+            const indexedProduct = index(productName)
+            console.log(indexedProduct)
+            break;
+        case "update":
+            const updatedProduct = update(productName, productPrice, productInStock)
+            console.log(updatedProduct)
             break;
     }
 }

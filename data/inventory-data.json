@@ -1,1 +1,1 @@
-[{"name":"Shampoo","id":5182,"priceInCents":"1000","inStock":false},{"name":"Deodorant","id":9928,"priceInCents":"600","inStock":true}]
+[{"name":"Deodorant","id":9928,"priceInCents":"600","inStock":true},{"name":"Shampoo","id":5182,"priceInCents":"1500","inStock":"true"}]
